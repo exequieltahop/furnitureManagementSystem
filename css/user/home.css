@@ -1,0 +1,79 @@
+:root{
+    --yellow-color: rgb(255, 233, 39);
+}
+/* HEADER */
+header{
+    background-color: var(--yellow-color);
+}
+/* NAV */
+#nav-container{
+}
+.nav{
+    margin-left: 1em;
+}
+.active-link, 
+.active-link > .nav-link{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+.nav-item,
+.nav-link{
+    border-radius: 5px;
+    transition: all 400ms ease-in-out; 
+}
+.nav-item:hover > .nav-link{
+    background-color: white;
+    color: black;
+}
+/* BURGER MENU */
+.burger-wrapper{
+    display: none;
+    flex-direction: column;
+    gap: 0.2em;
+}
+.bar{
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+/* HIDDEN NAV */
+#hidden-nav{
+    display: none;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.hidden-nav-item{
+    border-bottom: 1px solid black;
+}
+/* PRODUCT BOX */
+.product-box{
+    max-width: 250px;
+    min-width: 250px;
+}
+.product-box:hover{
+    transform: scale(1.01);
+}
+.product-img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+/* MEDIA QUERIES */
+@media(max-width: 700px){
+    #nav-container{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav{
+        display: none;
+        width: 100%;
+    }
+    #burger-menu{
+        display: grid;
+    }
+    #search-container{
+        width: 100%;
+    }
+}
